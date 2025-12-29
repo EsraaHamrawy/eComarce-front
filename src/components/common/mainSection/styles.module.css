@@ -1,0 +1,22 @@
+.mainText{
+    font-size: 45px;
+    font-weight: bold;
+    color: #000000;
+}
+.Text{
+    font-size: 16px;
+    font-weight: normal;
+    color: #7a7a7a;
+}
+
+.headerLeftBar {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .headerLeftBar > div:not(:last-of-type) {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid black;
+  }
+  

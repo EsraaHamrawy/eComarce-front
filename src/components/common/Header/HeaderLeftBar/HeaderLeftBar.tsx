@@ -20,12 +20,14 @@ const HeaderLeftBar = () => {
         title="Wishlist"
         totalQuantity={wishlistTotalQuantity}
         svgIcon={<WishlistIcon title="wishlist" />}
+        type="iconCounter"
       />
       <HeaderCounter
         to="cart"
         title="Cart"
         totalQuantity={cartTotalQuantity}
         svgIcon={<CartIcon title="cart" />}
+        type="iconCounter"
       />
     </div>
   );

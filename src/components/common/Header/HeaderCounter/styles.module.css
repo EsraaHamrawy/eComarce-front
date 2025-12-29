@@ -1,8 +1,36 @@
+
+
 .container {
   align-self: flex-end;
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* when type === "iconCounter" */
+.defaultCounter {
+  flex-direction: column;
+  gap: 4px;
+}
+.defaultCounter > h3{
+  font-size: 12px;
+  font-weight: normal;
+  color: #737373
+}
+.defaultCounter  .iconWrapper{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* default style (like the image you sent) */
+.iconCounter{
+  flex-direction: row;
+  gap: 12px;
 }
 
 .container h3 {

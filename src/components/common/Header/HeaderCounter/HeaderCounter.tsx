@@ -8,15 +8,17 @@ type HeaderCounterProps = {
   svgIcon: React.ReactNode;
   title: string;
   to: string;
+  type:string
 };
 
-const { container, totalNum, pumpAnimate, iconWrapper } = styles;
+const { totalNum, pumpAnimate, iconWrapper } = styles;
 
 const HeaderCounter = ({
   totalQuantity,
   svgIcon,
   title,
   to,
+  type,
 }: HeaderCounterProps) => {
   const navigate = useNavigate();
   const [isAnimate, setIsAnimate] = useState(false);
@@ -35,8 +37,12 @@ const HeaderCounter = ({
     return () => clearTimeout(debounce);
   }, [totalQuantity]);
 
+  const containerClass = `${styles.container} ${
+    type == "iconCounter" ? styles.iconCounter : styles.defaultCounter
+  }`;
+
   return (
-    <div className={container} onClick={() => navigate(to)}>
+    <div className={containerClass} onClick={() => navigate(to)} >
       <div className={iconWrapper}>
         {svgIcon}
         {totalQuantity > 0 && (
