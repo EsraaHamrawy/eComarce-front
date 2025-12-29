@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useAppDispatch } from "@store/hooks";
 import { removeToast, stopDelayAnimation } from "@store/toasts/toastsSlice";
 
-import { TToast } from "@types";
+import { TToast } from "@/types/toast";
 import styles from "./styles.module.css";
 
 const { toastItem } = styles;

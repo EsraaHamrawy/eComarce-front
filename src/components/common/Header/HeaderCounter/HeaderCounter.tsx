@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 
 type HeaderCounterProps = {
-  totalQuantity: number;
-  svgIcon: React.ReactNode;
+  totalQuantity?: number;
+  svgIcon: React.ReactNode | string;
   title: string;
   to: string;
   type:string
@@ -45,7 +45,7 @@ const HeaderCounter = ({
     <div className={containerClass} onClick={() => navigate(to)} >
       <div className={iconWrapper}>
         {svgIcon}
-        {totalQuantity > 0 && (
+        {totalQuantity && totalQuantity > 0 && (
           <div className={quantityStyle}>{totalQuantity}</div>
         )}
       </div>
