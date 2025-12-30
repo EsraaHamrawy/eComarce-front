@@ -1,5 +1,5 @@
 import { createSlice, nanoid, PayloadAction } from "@reduxjs/toolkit";
-import { TToast } from "@/types/toast";
+import { TToast } from "@types";
 
 interface IToastState {
   records: TToast[];

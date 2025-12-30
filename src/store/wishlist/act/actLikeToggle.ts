@@ -1,15 +1,22 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { axiosErrorHandler } from "@utils";
+import { RootState } from '../../index';
 
-const actLikeToggle = createAsyncThunk(
+type TLikeToggleResult = {
+  type: "add" | "remove";
+  id: number;
+};
+
+const actLikeToggle = createAsyncThunk<TLikeToggleResult>(
   "wishlist/actLikeToggle",
   async (productId: number, thunkAPI) => {
     const { rejectWithValue, getState} = thunkAPI;
 
     try {
-      const state : unknown = getState() ;
+      const state = getState() as RootState;
       const userId = state.auth.user?.id;
+
 
       if(!userId){
         return rejectWithValue("User not authenticated");

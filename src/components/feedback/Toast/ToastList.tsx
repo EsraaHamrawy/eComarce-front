@@ -1,5 +1,6 @@
 import { useAppSelector } from "@store/hooks";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
+
 import ToastItem from "./ToastItem";
 import styles from "./styles.module.css";
 const { toastList } = styles;
