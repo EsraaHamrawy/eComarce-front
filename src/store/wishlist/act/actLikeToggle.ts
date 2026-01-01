@@ -8,7 +8,11 @@ type TLikeToggleResult = {
   id: number;
 };
 
-const actLikeToggle = createAsyncThunk<TLikeToggleResult>(
+const actLikeToggle = createAsyncThunk<
+TLikeToggleResult,
+number,
+{ state: RootState; rejectValue: string }
+>(
   "wishlist/actLikeToggle",
   async (productId: number, thunkAPI) => {
     const { rejectWithValue, getState} = thunkAPI;
