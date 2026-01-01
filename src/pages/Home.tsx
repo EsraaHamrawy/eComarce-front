@@ -10,8 +10,9 @@ const Home = () => {
 
 
   return  <>
-  <Loading status={loading} error={error} type="category">
+  
   <MainSection />
+  <Loading status={loading} error={error} type="category">
   <Heading title="categories"  />
     <GridList<TCategory>
       emptyMessage="There are no categories"
